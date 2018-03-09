@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 
-  user_name: 
-  password_hash: 
-  full_name: 
-  type: 
-  class_id: 
+  id:
+  user_name:
+  password:
+  password_confirmation:
+  full_name:
+  type:
+  class_id:
 
 two:
-  id: 
-  user_name: 
-  password_hash: 
-  full_name: 
-  type: 
-  class_id: 
+  id:
+  user_name:
+  password:
+  user_password_confirmation:
+  full_name:
+  type:
+  class_id:
