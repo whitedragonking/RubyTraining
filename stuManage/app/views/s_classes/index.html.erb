@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>S Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class name</th>
+      <th>Teacher</th>
+      <th>Year</th>
+      <th>Grade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @s_classes.each do |s_class| %>
+      <tr>
+        <td><%= s_class.class_name %></td>
+        <td><%= s_class.teacher_id %></td>
+        <td><%= s_class.year %></td>
+        <td><%= s_class.grade_id %></td>
+        <td><%= link_to 'Show', s_class %></td>
+        <td><%= link_to 'Edit', edit_s_class_path(s_class) %></td>
+        <td><%= link_to 'Destroy', s_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New S Class', new_s_class_path %>

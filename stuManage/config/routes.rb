@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :s_classes
+  resources :grades
+  get "login" => 'session#new'
+  post "login" => 'session#login'
+  get "logout" => 'session#logout'
+
   resources :users
   root 'welcome#index'
     # root 'users#register'

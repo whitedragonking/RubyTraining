@@ -1,14 +1,21 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-form
-{
-  margin: 0 auto;
-  width: 40%;
-  align: center;
-  height: auto;
+// form
+// {
+//   margin: 0 auto;
+//   width: 40%;
+//   align: center;
+//   height: auto;
+// }
+// p{
+//     width: 100%;
+//   margin: 0 auto;
+// }
+.button{
+  margin: 10px 0;
+  width: 50%;
 }
-p{
-    width: 100%;
-  margin: 0 auto;
+.button:visited{
+  color: #fff
 }

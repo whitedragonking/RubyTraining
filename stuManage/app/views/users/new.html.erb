@@ -1,8 +1,10 @@
-<h1 align="center">New User</h1>
+<div class="container">
+  <h1 align="center">New User</h1>
 
-<%= render 'form', user: @user %>
-
-<!-- <%= link_to 'Back', users_path %> -->
-<!-- <div class="actions"> -->
-  <%= link_to 'Back', users_path %>
-<!-- </div> -->
+  <%= render 'form', user: @user %>
+<div class="col-lg-offset-3 col-lg-3">
+  <div class="text-center">
+    <%= link_to 'Quay lại', users_path, :class => 'btn btn-primary btn-block button'%>
+  </div>
+  </div>
+</div>
