@@ -1,10 +1,11 @@
 class SessionController < ApplicationController
+skip_before_action :require_login, only: [:new, :login]
   def new
     # user_role = (User.find_by id: session[:user_id]).id
     # unless user_role.nil?
     if User.find_by id: session[:user_id]
       user = User.find_by id: session[:user_id]
-      redirect_to users_path
+      redirect_to user
     end
   end
   def login

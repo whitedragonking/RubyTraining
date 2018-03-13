@@ -9,6 +9,21 @@
 </head>
 
 <body>
+  <nav class="subnav">
+    <ul>
+      <% if isLoggedIn? %>
+        <!-- <li><#%= link_to "Profile", user_path(@id), :class => current_class?(user_path)  %></li> -->
+        <% if getRole == 2 %>
+          <li><%= link_to "Grades", grades_path, :class => current_class?(grades_path)  %></li>
+          <li><%= link_to "Classes", s_classes_path, :class => current_class?(s_classes_path) %></li>
+          <li><%= link_to "Student", users_path, :class => current_class?(users_path) %></li>
+          <!-- <li><#%= link_to "Register", new_user_path, :class => current_class?(new_user_path)  %></li> -->
+        <% end %>
+      <li><%= link_to "Back", users_path, :class => current_class?(users_path)  %></li>
+      <li><%= link_to "Logout", logout_path, :class => current_class?(logout_path), data: {confirm: "Are you sure want to log out ?"}  %></li>
+      <% end %>
+    </ul>
+  </nav>
   <section class="content" style="min-height: auto;">
     <% flash.each do |key,value| %>
     <div class="row">
