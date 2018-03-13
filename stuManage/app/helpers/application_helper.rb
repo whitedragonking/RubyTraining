@@ -8,9 +8,6 @@ module ApplicationHelper
       return @role = (User.find_by id: session[:user_id]).role
     end
   end
-  def isLoggedIn?
-    return User.find_by id: session[:user_id]
-  end
   def getUserLogged
     return User.find_by id: session[:user_id]
   end
