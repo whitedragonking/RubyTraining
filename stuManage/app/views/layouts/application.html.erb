@@ -13,25 +13,25 @@
     <!-- <ul> -->
       <% if logged_in? %>
       <div class="col-lg-1">
-        <%= link_to "Profile", @current_user, :class => current_class?(users_path), :class => 'col-lg-2 btn btn-primary btn-block button'  %>
+        <%= link_to "Profile", current_user, :class => 'current_class?(users_path) col-lg-2 btn btn-primary btn-block button'  %>
       </div>
         <% if getRole == 2 %>
         <div class="col-lg-1">
-          <%= link_to "Grades", grades_path, :class => current_class?(grades_path), :class => 'col-lg-2 btn btn-primary btn-block button'  %>
+          <%= link_to "Grades", grades_path, :class => 'current_class?(grades_path) col-lg-2 btn btn-primary btn-block button'  %>
         </div>
         <div class="col-lg-1">
-          <%= link_to "Classes", s_classes_path, :class => current_class?(s_classes_path), :class => 'col-lg-2 btn btn-primary btn-block button' %>
+          <%= link_to "Classes", s_classes_path, :class => 'current_class?(s_classes_path) col-lg-2 btn btn-primary btn-block button' %>
         </div>
         <div class="col-lg-1">
-          <%= link_to "Student", users_path, :class => current_class?(users_path), :class => 'col-lg-2 btn btn-primary btn-block button' %>
+          <%= link_to "Student", users_path, :class => 'current_class?(users_path) col-lg-2 btn btn-primary btn-block button' %>
         </div>
           <!-- <li><#%= link_to "Register", new_user_path, :class => current_class?(new_user_path)  %></li> -->
         <% end %>
         <div class="col-lg-1">
-          <%= link_to "Back", users_path, :class => current_class?(users_path), :class => 'col-lg-2 btn btn-primary btn-block button'  %>
+          <%= link_to "Back", users_path, :class => 'current_class?(users_path) col-lg-2 btn btn-primary btn-block button'  %>
         </div>
         <div class="col-lg-1">
-          <%= link_to "Logout", logout_path, :class => current_class?(logout_path), :class => 'col-lg-2 btn btn-primary btn-block button', data: {confirm: "Are you sure want to log out ?"}  %>
+          <%= link_to "Logout", logout_path, :class => 'current_class?(logout_path) col-lg-2 btn btn-primary btn-block button', data: {confirm: "Are you sure want to log out ?"}  %>
         </div>
       <% end %>
     <!-- </ul> -->

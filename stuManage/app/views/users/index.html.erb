@@ -12,10 +12,8 @@
     </div>
   </div>
 <label for="">List Users</label>
-<div class="contextual" align="right">
-  <%= link_to(new_user_path, class: "btn btn-success") do %>
-    New User <i class="icon-plus icon-white"></i>
-  <% end %>
+<div class="col-lg-12 form-group" align="right">
+  <%= link_to 'New User',new_user_path, :class => "btn btn-success button-function"%>
 </div>
 <table id="table-collapse" class="table table-bordered col-lg-7 table-user">
   <thead>
@@ -35,15 +33,15 @@
     <% @users.each do |user| %>
       <tr>
         <!-- <td><%= user.id %></td> -->
-        <td><%= user.user_name %></td>
         <!-- <td><%= user.password_digest %></td> -->
+        <td><%= user.user_name %></td>
         <td><%= user.full_name %></td>
-        <td><%= user.role == 0 ? 'Teacher' : user.role == 1 ? 'Student' : 'Admin'%></td>
+        <td><%= user.role == 0 ? 'Student' : user.role == 1 ? 'Teacher' : 'Admin'%></td>
         <td><%= user.class_id %></td>
-        <td>
-          <%= link_to 'Show', user %>
-          <%= link_to 'Edit', edit_user_path(user) %>
-          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td class="text-center">
+          <%= link_to 'Show', user, :class => 'btn btn-sm btn-info button-function'%>
+          <%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-sm btn-warning button-function' %>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm btn-danger button-function'  %>
         </td>
       </tr>
     <% end %>
