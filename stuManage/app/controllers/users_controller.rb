@@ -23,11 +23,13 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    @current_page = 'register'
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
+    @current_page = 'edit'
   end
 
   # POST /users

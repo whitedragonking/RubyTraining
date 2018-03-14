@@ -1,39 +1,39 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Id:</strong>
-  <%= @user.id %>
-</p>
+<!--<p>-->
+  <!--<strong>Id:</strong>-->
+  <!--<#%= @user.id %>-->
+<!--</p>-->
 
-<p>
-  <strong>User name:</strong>
-  <%= @user.user_name %>
-</p>
+<!--<p>-->
+  <!--<strong>User name:</strong>-->
+  <!--<#%= @user.user_name %>-->
+<!--</p>-->
 
-<p>
-  <strong>Password hash:</strong>
-  <%= '********' %>
-</p>
+<!--<p>-->
+  <!--<strong>Password hash:</strong>-->
+  <!--<#%= '********' %>-->
+<!--</p>-->
 
-<p>
-  <strong>Full name:</strong>
-  <%= @user.full_name %>
-</p>
+<!--<p>-->
+  <!--<strong>Full name:</strong>-->
+  <!--<#%= @user.full_name %>-->
+<!--</p>-->
 
-<p>
-  <strong>Type:</strong>
-  <%= @user.role %>
-</p>
+<!--<p>-->
+  <!--<strong>Type:</strong>-->
+  <!--<#%= @user.role %>-->
+<!--</p>-->
 
-<p>
-  <strong>Class:</strong>
-  <%= @user.class_id %>
-</p>
+<!--<p>-->
+  <!--<strong>Class:</strong>-->
+  <!--<#%= @user.class_id %>-->
+<!--</p>-->
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> |
-<%= link_to 'Logout', logout_path %>
+<%#= link_to 'Edit', edit_user_path(@user) %>
+<%#= link_to 'Back', users_path %>
+<!--<%#= link_to 'Logout', logout_path %>-->
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -47,9 +47,8 @@
           </div>
           <div class="col-sm-6 col-md-8">
             <h4>
-              @user.full_name</h4>
-            <small><cite title="San Francisco, USA">@user.role == 2 ? 'Admin' <i class="glyphicon glyphicon-map-marker">
-            </i></cite></small>
+              <%=@user.full_name%> </h4>
+            <small><cite title="San Francisco, USA"><%= @user.role == 0 ? 'Student' : @user.role == 1 ? 'Teacher' : 'Admin'  %></cite></small>
             <p>
               <i class="glyphicon glyphicon-envelope"></i>email@example.com
               <br />

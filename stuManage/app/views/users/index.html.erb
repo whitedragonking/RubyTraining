@@ -8,7 +8,7 @@
     </div>
     <div class="col-lg-12 form-group">
       <label for="">Welcome</label>
-      <%= link_to current_user.user_name, user_path(current_user) %>
+      <%= link_to current_user.full_name, user_path(current_user) %>
     </div>
   </div>
 <label for="">List Users</label>
@@ -39,9 +39,9 @@
         <td><%= user.role == 0 ? 'Student' : user.role == 1 ? 'Teacher' : 'Admin'%></td>
         <td><%= user.class_id %></td>
         <td class="text-center">
-          <%= link_to 'Show', user, :class => 'btn btn-sm btn-info button-function'%>
-          <%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-sm btn-warning button-function' %>
-          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm btn-danger button-function'  %>
+          <%= link_to 'Show', user, :class => 'btn btn-sm btn-info button-function button-width'%>
+          <%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-sm btn-warning button-function button-width' %>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm btn-danger button-function button-width' %>
         </td>
       </tr>
     <% end %>
