@@ -1,0 +1,13 @@
+# This is the configuration used to check the NextCore rspec code.
+inherit_from: .rubocop.yml
+
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+SignalException:
+  Enabled: false
+
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle.
+AlignHash:
+  Enabled: false
+
+BlockAlignment:
+  Enabled: false

@@ -1,0 +1,314 @@
+# 修正不要なエラーたち
+
+AccessorMethodName:
+  Description: Check the naming of accessor methods for get_/set_.
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+AccessModifierIndentation:
+  Description: Check indentation of private/protected visibility modifiers.
+  Enabled: false
+  # EnforcedStyle: indent
+  # SupportedStyles:
+    # - outdent
+    # - indent
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle.
+AlignHash:
+  Description: >-
+                 Align the elements of a hash literal if they span more than
+                 one line.
+  Enabled: false
+  # # Alignment of entries using hash rocket as separator. Valid values are:
+  # #
+  # # key - left alignment of keys
+  # #   'a' => 2
+  # #   'bb' => 3
+  # # separator - alignment of hash rockets, keys are right aligned
+  # #    'a' => 2
+  # #   'bb' => 3
+  # # table - left alignment of keys, hash rockets, and values
+  # #   'a'  => 2
+  # #   'bb' => 3
+  # EnforcedHashRocketStyle: key
+  # # Alignment of entries using colon as separator. Valid values are:
+  # #
+  # # key - left alignment of keys
+  # #   a: 0
+  # #   bb: 1
+  # # separator - alignment of colons, keys are right aligned
+  # #    a: 0
+  # #   bb: 1
+  # # table - left alignment of keys and values
+  # #   a:  0
+  # #   bb: 1
+  # EnforcedColonStyle: key
+  # # Select whether hashes that are the last argument in a method call should be
+  # # inspected? Valid values are:
+  # #
+  # # always_inspect - Inspect both implicit and explicit hashes.
+  # #   Registers and offence for:
+  # #     function(a: 1,
+  # #       b: 2)
+  # #   Registers an offence for:
+  # #     function({a: 1,
+  # #       b: 2})
+  # # always_ignore - Ignore both implicit and explicit hashes.
+  # #   Accepts:
+  # #     function(a: 1,
+  # #       b: 2)
+  # #   Accepts:
+  # #     function({a: 1,
+  # #       b: 2})
+  # # ignore_implicit - Ingore only implicit hashes.
+  # #   Accepts:
+  # #     function(a: 1,
+  # #       b: 2)
+  # #   Registers an offence for:
+  # #     function({a: 1,
+  # #       b: 2})
+  # # ignore_explicit - Ingore only explicit hashes.
+  # #   Accepts:
+  # #     function({a: 1,
+  # #       b: 2})
+  # #   Registers an offence for:
+  # #     function(a: 1,
+  # #       b: 2)
+  # EnforcedLastArgumentHashStyle: always_inspect
+  # SupportedLastArgumentHashStyles:
+    # - always_inspect
+    # - always_ignore
+    # - ignore_implicit
+    # - ignore_explicit
+
+AsciiComments:
+  Description: 'Use only ascii symbols in comments.'
+  Enabled: false
+
+AsciiIdentifiers:
+  Description: 'Use only ascii symbols in identifiers.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+BracesAroundHashParameters:
+  Description: 'Enforce braces style inside hash parameters.'
+  Enabled: false
+  # EnforcedStyle: no_braces
+  # SupportedStyles:
+    # - braces
+    # - no_braces
+
+#TrailingComma:
+#  Description: 'Checks for trailing comma in parameter lists and literals.'
+#  Enabled: false
+  # EnforcedStyleForMultiline: no_comma
+  # SupportedStyles:
+    # - comma
+    # - no_comma
+
+ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Max: 200
+
+ConditionalAssignment:
+  Description: >-
+                 Use the return value of `if` and `case` statements for
+                 assignment to a variable and variable comparison instead
+                 of assigning that variable inside of each branch.
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredMethods.
+CollectionMethods:
+  Description: 'Preferred collection methods.'
+  Enabled: false
+  # PreferredMethods:
+    # collect: 'map'
+    # collect!: 'map!'
+    # inject: 'reduce'
+    # detect: 'find'
+    # find_all: 'select'
+
+Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+# Configuration parameters: AllowAdjacentOneLineDefs.
+EmptyLineBetweenDefs:
+  Description: 'Use empty lines between defs.'
+  Enabled: false
+  # If true, this parameter means that single line method definitions don't
+  # need an empty line between them.
+  # AllowAdjacentOneLineDefs: false
+
+# Cop supports --auto-correct.
+EmptyLines:
+  Description: "Don't use several empty lines in a row."
+  Enabled: false
+
+EmptyLinesAroundAccessModifier:
+  Description: "Keep blank lines around access modifiers."
+  Enabled: false
+
+# Cop supports --auto-correct.
+EmptyLinesAroundClassBody:
+  Description: "Keeps track of empty lines around class bodies."
+  Enabled: false
+
+# Cop supports --auto-correct.
+EmptyLinesAroundMethodBody:
+  Description: "Keeps track of empty lines around method bodies."
+  Enabled: false
+
+# Cop supports --auto-correct.
+EmptyLinesAroundModuleBody:
+  Description: "Keeps track of empty lines around module bodies."
+  Enabled: false
+
+Encoding:
+  Description: 'Use UTF-8 as the source file encoding.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+HashSyntax:
+  Description: >-
+                 Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
+                 { :a => 1, :b => 2 }.
+  Enabled: false
+  # EnforcedStyle: ruby19
+  # SupportedStyles:
+    # - ruby19
+    # - hash_rockets
+
+IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+LeadingCommentSpace:
+  Description: 'Comments should start with a space.'
+  Enabled: false
+
+MutableConstant:
+  Description: 'Do not assign mutable objects to constants.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+NumericLiterals:
+  Description: >-
+                 Add underscores to large numeric literals to improve their
+                 readability.
+  Enabled: false
+  # MinDigits: 5
+
+RegexpLiteral:
+  Description: >-
+                 Use %r for regular expressions matching more than
+                 `MaxSlashes` '/' characters.
+                 Use %r only for regular expressions matching more than
+                 `MaxSlashes` '/' character.
+  Enabled: false
+  # The maximum number of (escaped) slashes that a slash-delimited regexp is
+  # allowed to have. If there are more slashes, a %r regexp shall be used.
+  #MaxSlashes: 1
+
+# Offence count: 19
+# Configuration parameters: Methods.
+SingleLineBlockParams:
+  Description: 'Enforces the names of some block params.'
+  Enabled: false
+  # Methods:
+    # - reduce:
+        # - a
+        # - e
+    # - inject:
+        # - a
+        # - e
+
+# Cop supports --auto-correct.
+SpecialGlobalVars:
+  Description: 'Avoid Perl-style global variables.'
+  Enabled: false
+# Cop supports --auto-correct.
+SpaceAfterColon:
+  Description: 'Use spaces after colons.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+SpaceAfterComma:
+  Description: 'Use spaces after commas.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+SpaceAfterMethodName:
+  Description: >-
+                 Never put a space between a method name and the opening
+                 parenthesis.
+  Enabled: false
+
+# Cop supports --auto-correct.
+SpaceAfterSemicolon:
+  Description: 'Use spaces after semicolons.'
+  Enabled: false
+
+# SpaceBeforeBlockBraces:
+  # EnforcedStyle: space
+  # SupportedStyles:
+    # - space
+    # - no_space
+
+# Cop supports --auto-correct.
+SpaceAroundEqualsInParameterDefault:
+  Description: >-
+                 Checks that the equals signs in parameter default assignments
+                 have or don't have surrounding space depending on
+                 configuration.
+  Enabled: false
+
+# Cop supports --auto-correct.
+SpaceAroundOperators:
+  Description: 'Use spaces around operators.'
+  Enabled: false
+
+# Cop supports --auto-correct.
+# SpaceInsideBrackets:
+  # Description: 'No spaces after [ or before ].'
+  # Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
+SpaceInsideHashLiteralBraces:
+  Description: "Use spaces inside hash literal braces - or don't."
+  Enabled: false
+  # EnforcedStyle: space
+  # EnforcedStyleForEmptyBraces: no_space
+  # SupportedStyles:
+    # - space
+    # - no_space
+
+# Cop supports --auto-correct.
+SpaceInsideParens:
+  Description: 'No spaces after ( or before ).'
+  Enabled: false
+
+# Cop supports --auto-correct.
+TrailingBlankLines:
+  Description: 'Checks trailing blank lines and final newline.'
+  Enabled: false
+
+# TrailingCommaInLiteral:
+  # Description: 'Checks for trailing comma in array and hash literals.'
+  # Enabled: false
+
+# Cop supports --auto-correct.
+WordArray:
+  Description: 'Use %w or %W for arrays of words.'
+  # MinSize: 0
+  MinSize: 39
+
+Rails:
+  Enabled: false

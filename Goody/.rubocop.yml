@@ -1,0 +1,7 @@
+# This is the configuration used to check the NextCore rspec code.
+AllCops:
+  TargetRubyVersion: 2.3
+
+inherit_from:
+  - .config_rubocop/disabled.yml
+  - .config_rubocop/fixme.yml

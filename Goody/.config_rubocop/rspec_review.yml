@@ -1,0 +1,12 @@
+inherit_from: '../.rubocop.yml'
+
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+SignalException:
+  Enabled: false
+
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle.
+AlignHash:
+  Enabled: false
+
+BlockAlignment:
+  Enabled: false
