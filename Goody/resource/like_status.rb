@@ -14,7 +14,7 @@ class LikeStatus
     }
     # Article.new.get_article.to_json
     Article.new.get_article_by_cat(params, 1, 5).to_json
-    # Article.new.get_article_by_cat(params1, 1, 2).to_json
+    Article.new.get_article_by_cat(params1, 1, 2).to_json
     # Article.new.get_article_by_id(1,3).to_json
   end
 

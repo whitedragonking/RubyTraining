@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
 
-set :database, "sqlite3:./../test-app.sqlite3"
+set :database, 'sqlite3:./../test-app.sqlite3'
 
 class Article < ActiveRecord::Base
   # self.table_name = 'articles'
@@ -16,6 +16,7 @@ class Article < ActiveRecord::Base
 
   def get_article_by_cat(params, m_start, m_end)
     sql = get_article_have_user_id(params) + ' WHERE t.del_flg = 0 AND t.display_flg = 0' + get_article_have_category(params) + ' ORDER BY t.attention DESC, t.numberic DESC, t.id DESC' + get_data_have_range(m_start, m_end)
+    puts "Get_article_by_cat Query : #{sql}"
     run_sql(sql)
   end
 
@@ -74,6 +75,7 @@ class Article < ActiveRecord::Base
 
   def run_sql(sql)
     article = Article.find_by_sql(sql)
-    article.empty? ? [] : article.to_ary
+    puts "Article is : #{article.to_json}"
+    article.empty? ? [] : article.to_a
   end
 end

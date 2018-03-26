@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/jsonp'
 
-set :database, "sqlite3:test-app.sqlite3"
+set :database, 'sqlite3:test-app.sqlite3'
 
 require './resource/user_data'
 require './resource/like_status'
