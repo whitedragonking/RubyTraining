@@ -52,9 +52,9 @@ class Article < ActiveRecord::Base
   end
 
   def get_article_by_user(user_id)
-    sql = "SELECT t.id, t.title, t.category, t.attention, t.numberic,t.description,t.art_img,CASE WHEN t.public IS NULL THEN ' ' ELSE t.public END AS public,d.status as like_status FROM articles AS t
-            RIGHT JOIN (SELECT  article_id,status FROM like_statuses WHERE user_id='#{user_id}' AND status=1) AS d ON t.id = d.article_id WHERE t.del_flg = 0 AND t.display_flg = 0
-             ORDER BY t.attention DESC, t.numberic DESC, t.id DESC"
+    sql = "SELECT t.id, t.title, t.category, t.attention, t.numberic,t.description,t.art_img,CASE WHEN t.public IS NULL THEN ' ' ELSE t.public END AS public,
+d.status AS like_status FROM like_statuses AS d LEFT JOIN articles AS t ON t.id = d.article_id AND d.user_id=#{user_id} AND d.status=1 WHERE t.del_flg = 0 AND t.display_flg = 0
+ORDER BY t.attention DESC, t.numberic DESC, t.id DESC"
     puts sql
     run_sql(sql)
   end

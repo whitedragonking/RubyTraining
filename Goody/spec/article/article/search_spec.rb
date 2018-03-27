@@ -1,7 +1,9 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
 
-require File.dirname(__FILE__) + '/article'
+require File.dirname(__FILE__) + '/../../../core/article'
+
+set :database, 'sqlite3:./test-app.sqlite3'
 
 describe Article do
   describe '#search' do
